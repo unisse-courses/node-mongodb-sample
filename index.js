@@ -99,7 +99,27 @@ app.post('/searchStudents', function(req, res) {
   //       & return the array of objects for the template
 });
 
+app.post('/updateStudent', function(req, res) {
+  var query = {
+    name: req.body.name
+  };
 
+  var update = {
+    $set: { id: 120 }
+  };
+
+  mongoClient.connect(databaseURL, options, function(err, client) {
+    if(err) throw err;
+    const dbo = client.db(dbname);
+
+    dbo.collection("students").updateOne(query, update, function(err, result) {
+      if(err) throw err;
+
+      console.log(result);
+      res.send(result);
+    });
+  });
+})
 /**
   To be able to render images, css and JavaScript files, it's best to host the static files
   and use the expected path in the data and the imports.
