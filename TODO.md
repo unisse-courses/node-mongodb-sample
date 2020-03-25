@@ -18,6 +18,10 @@ In this method, the data is loaded **by the server** through the handlebars view
 Read through the inline comments for each section and take note of the TODO comments. The database URL definition are already provided with the `dbname`.
 
 We need to pass the `useUnifiedTopology` option whenever we connect to the database because of [this update in 3.2.1](https://github.com/mongodb/node-mongodb-native/releases/tag/v3.2.1).
+```JavaScript
+// additional connection options
+const options = { useUnifiedTopology: true };
+```
 
 ## Connecting to the database
 1. Open up `index.js`.
@@ -289,4 +293,6 @@ The last task for this exercise is to expand the find example a bit and use a fo
   ![alt text](screens/find-student-server-preview.png "Array of objects from the serach")
 
 6. We can send the result directly now because the client is expecting an array for the data. Add `res.send(result);` to the callback from above. Restart the server and refresh. You should now see the students listed below the form.
-  ![alt text]()
+  ![alt text](screens/find-student-client.png "Results show!")
+
+Congratulations! You've now completed this mini tutorial. For updating a value in the database, there's a POST method in `index.js`. You can test it out using [Postman](https://www.postman.com/) while the server is still running.
