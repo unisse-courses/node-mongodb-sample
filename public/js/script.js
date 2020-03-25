@@ -69,6 +69,7 @@ $(document).ready(function() {
       console.log(data);
 
       var studentListContainer = $('#studentList');
+      studentListContainer.empty(); // clear children every time (refresh results)
 
       data.forEach((item, i) => {
         addStudentDiv(item, studentListContainer);
