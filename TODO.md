@@ -296,3 +296,15 @@ The last task for this exercise is to expand the find example a bit and use a fo
   ![alt text](screens/find-student-client.png "Results show!")
 
 Congratulations! You've now completed this mini tutorial. For updating a value in the database, there's a POST method in `index.js`. You can test it out using [Postman](https://www.postman.com/) while the server is still running.
+
+Here's how to configure it once you've downloaded Postman.
+1. Make sure the method is POST. Then set the headers to:
+![alt text](screens/postman-headers.png)
+
+2. Then set your request body. It has to be in JSON format so all fields and values are using double quotes. The endpoint is programmed for an exact match, so make sure the value is a match to a record you have.
+![alt text](screens/postman-request.png)
+
+3. The result should look something like this:
+![alt text](screens/postman-response.png)
+
+4. Go back to your View Students and see if the ID Number was updated to `120`. 
