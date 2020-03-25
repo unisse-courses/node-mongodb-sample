@@ -15,6 +15,7 @@ At the end of this sample, you should be able to:
 1. Download MongoDB Community Server from [here](https://www.mongodb.com/download-center/community).
 2. Follow the instructions for your operating system from [this guide](https://docs.mongodb.com/manual/administration/install-community/).
 3. You can also follow along this [YouTube Video by Traversy Media](https://youtu.be/-56x56UppqQ) for installing and using mongo `shell` & MongoDB Compass (similar to MySQL Workbench).
+4. Make sure that mongodb is running as a service in the background. Otherwise, this will not work.
 
 ## Local Setup
 1. Clone this repository: `git clone https://github.com/unisse-courses/node-mongodb-sample.git`
@@ -24,8 +25,11 @@ At the end of this sample, you should be able to:
 4. Run the server: `node index.js`
     * Navigate to `http://localhost:9090/` in the browser to view the app.
 
-The expected screen should be:
-![expected screen](screens/expected-screen.png)
+The landing page should look like this:
+![alt text](screens/expected-home.png "Expected Landing Page")
+
+Navigate to "Students" on the nav bar and the page should look like this:
+![alt text](screens/expected-students.png "Expected Students Page")
 
 
 To stop the server, simply key in `CTRL+C` (Windows) or `control (^) + C` (Mac).
