@@ -30,11 +30,7 @@ The expected screen should be:
 
 To stop the server, simply key in `CTRL+C` (Windows) or `control (^) + C` (Mac).
 
-#### Note: This repository will only allow you to clone and pull the code provided here. To be able to **push changes**, you need to **fork** this repository to your account and that will allow you to keep a personal copy of any changes you may have.
+##### Note: This repository will only allow you to clone and pull the code provided here. To be able to **push changes**, you need to **fork** this repository to your account and that will allow you to keep a personal copy of any changes you may have.
 
-## What to do
-After cloning this repository, follow along with the video on Canvas to be able to complete the exercise.
-
-
-#### On dummy data
-All names and data are not real or are not associated with any person.
+## What to do next
+After cloning this repository, read the `TODO.md` file and follow the instructions to be able to complete the code. 🤓
