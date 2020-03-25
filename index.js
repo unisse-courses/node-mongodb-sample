@@ -15,6 +15,9 @@ const mongoClient = mongodb.MongoClient;
 const databaseURL = "mongodb://localhost:27017/";
 const dbname = "studentsdb";
 
+// additional connection options
+const options = { useUnifiedTopology: true };
+
 /**
   Creates an engine called "hbs" using the express-handlebars package.
 **/
@@ -37,7 +40,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
   This is so that we can create the collections needed prior to any transactions
   that we need to do.
 **/
-mongoClient.connect(databaseURL, function(err, client) {
+mongoClient.connect(databaseURL, options, function(err, client) {
   /**
     Only do database manipulation inside of the connection
     When a connection is made, it will try to make the database
